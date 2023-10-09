@@ -13,10 +13,9 @@ def get_benchmark_description(name):
         raise "Unimplemented benchmark error"
 
 def OSY(xosy, maximization=True):
-    # original BNH is defined for minimization ->
+    # original OSY is defined for minimization ->
     # f values are multiplied in -1 to work with PACMOO as a maximization problem
     # all constraints >= 0
-    # 0<=x[0]<=5 & 0<=x[1]<=3
     x = copy.deepcopy(xosy)
     _, _, d, input_ranges, _ = get_benchmark_description("OSY")
     for i in range(d):
